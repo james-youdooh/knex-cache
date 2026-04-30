@@ -1,6 +1,6 @@
 {
   "name": "knex-cache-plugin",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "A caching plugin for Knex.js",
   "main": "lib/index.js",
   "scripts": {
@@ -23,9 +23,9 @@
   "author": "olinoles",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.14.2",
-    "knex": "^3.1.0",
-    "typescript": "^5.4.5"
+    "@types/node": "^25.6.0",
+    "knex": "^3.2.9",
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "knex": ">= 0.95.0"
