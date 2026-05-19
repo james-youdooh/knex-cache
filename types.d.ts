@@ -2,14 +2,15 @@ import { Knex } from "knex";
 
 interface CacheOptions {
   key?: string;
+  ttl?: number; // seconds
 }
 type CacheMethod = <TRecord extends {} = any, TResult = any>(
-  options?: CacheOptions
+  options?: CacheOptions,
 ) => Knex.QueryBuilder<TRecord, TResult>;
 
 type ClearCacheMethod = <
   TRecord extends {} = any,
-  TResult = any
+  TResult = any,
 >() => Knex.QueryBuilder<TRecord, TResult>;
 
 declare module "knex" {
@@ -22,4 +23,4 @@ declare module "knex" {
   }
 }
 
-export function attachCache(): void;
+export function attachCache(maxSize?: number): void;
